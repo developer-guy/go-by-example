@@ -15,7 +15,11 @@ func main() {
 
 	fmt.Println(person{Name: "Fred"})
 
-	var personVal person = person{Name: "Asena", Age: 20}
+	var personVal person = person{
+		Name: "Asena",
+		Age:  20,
+	}
+
 	fmt.Println("Person address : ", personVal)
 
 	var copyPerson *person = &personVal

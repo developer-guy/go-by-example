@@ -11,11 +11,11 @@ func main() {
 	fmt.Println("i", i)
 }
 
-func zeroval(i int) {
+func zeroval(i int) { // i'nin kopyası iletilir.
 	i = 0
 }
 
-func zeroptr(i *int) { //
+func zeroptr(i *int) { // i değişkenin tutulduğu bellek adresi
 	fmt.Println("Addres of i ", i)
 	*i = 0 // *i sentaksı ise i değişkenin bulunduğu adresten değerini döndürür.
 }

@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"strconv"
 )
 
 func f1(arg int) (int, error) {
@@ -23,9 +22,9 @@ func (c *CustomError) Error() string { //pointer receiver olarak error interface
 	return fmt.Sprintf("%d - %s", c.arg, c.prob)
 }
 
-func f2(arg int) (int, *CustomError) {
+func f2(arg int) (int, error) {
 	if arg == 42 {
-		return -1, &CustomError{arg, "cant work with " + strconv.Itoa(arg)}
+		return -1, &CustomError{arg, "cant work with "}
 	}
 	return arg + 3, nil //burda geriye customError'ün pointerı geriye döndürüldüğü için nil geri döndürebildik.
 }
@@ -40,13 +39,11 @@ func main() {
 		fmt.Println("Arg:", arg)
 	}
 
-
 	var arg2 int
-	var customError *CustomError
-	arg2, customError = f2(42)
+	arg2, customError := f2(42)
 
 	if customError != nil {
-		fmt.Println("Error explanation:",customError.prob)
+		fmt.Println("Error explanation:", customError.Error())
 	} else {
 		fmt.Println("Arg:", arg2)
 	}
