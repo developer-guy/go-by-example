@@ -18,11 +18,12 @@ func Include(vs []string, v string) bool {
 	return Index(vs, v) >= 0
 }
 
-func Any(vs []string, f func(v string) bool) bool {
+func Any(vs []string, f func(string) bool) bool {
 	var stats bool = false
 	for _, e := range vs {
 		if f(e) {
 			stats = true
+			break
 		}
 	}
 	return stats

@@ -6,6 +6,10 @@ func main() {
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
 
+
+	//slice1 := []int{}
+	//array1 := [5]int{}
+
 	s[0] = "a"
 	s[1] = "b"
 	s[2] = "c"

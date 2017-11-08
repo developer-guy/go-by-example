@@ -3,6 +3,20 @@ package main
 import "fmt"
 
 func main() {
+
+	var (
+		x = 10
+		y = 20
+		z = 30
+	)
+	fmt.Println(x, y, z)
+
+	const (
+		t = 40
+		u = 50
+		v = 70
+	)
+
 	var a string = "initial"
 	fmt.Println(a)
 

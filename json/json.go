@@ -32,6 +32,7 @@ func main() {
 
 	slcB, _ := json.Marshal([]string{"apple", "peach", "pear"})
 	fmt.Println(string(slcB))
+
 	mapD := map[string]int{"apple": 5, "lettuce": 7}
 	mapB, _ := json.Marshal(mapD)
 	fmt.Println(string(mapB))
@@ -64,12 +65,12 @@ func main() {
 	num := data["num"].(float64)
 	fmt.Println(num)
 
-	strs := data["strs"].([]interface{})
+	strs := data["strs"].([]string) //type casting
 	fmt.Println(strs)
-	str1 := strs[0].(string)
+	str1 := strs[0]
 	fmt.Println(str1)
 
-	resp2JsonStr := ` {"page" : 1,"fruits":["apple","peach"]}  `
+	resp2JsonStr := `{"page" : 1,"fruits":["apple","peach"]} `
 	var resp2d *Response2 = &Response2{}
 	if err := json.Unmarshal([]byte(resp2JsonStr), resp2d); err != nil {
 		panic(err)
@@ -80,10 +81,11 @@ func main() {
 	d := map[string]int{"apple": 5, "lettuce": 7}
 	encode.Encode(d)
 
-	resp1JsonStr := `{
+	resp1JsonStr :=
+		`{
 	      "Page" : 1,
 	      "Fruits" : ["apple","peach"]
-			}
+		}
 		`
 	var byte = []byte(resp1JsonStr)
 	var resp1 *Response1 = &Response1{}
