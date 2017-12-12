@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	i := 5
+	var i int = 5
 	zeroval(i)
 	fmt.Println("i", i)
 

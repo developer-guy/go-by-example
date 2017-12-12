@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 
-	messages := make(chan string) // channel'a değer göndermek için
+	messages := make(chan string)
+	// channel'a değer göndermek için
 	// chan <- sentaksı kullanılır değer almak için ise
 	// <- chan sentaksı kullanılır.
 

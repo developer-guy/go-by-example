@@ -19,9 +19,9 @@ func main() {
 
 	fmt.Println("map:", m)
 
-	k2val, present := m["k2"]
+	k2val, isPresent := m["k2"]
 
-	if present {
+	if isPresent {
 		fmt.Println("k2 key val:", k2val)
 	}
 

@@ -65,7 +65,7 @@ func main() {
 	num := data["num"].(float64)
 	fmt.Println(num)
 
-	strs := data["strs"].([]string) //type casting
+	strs := data["strs"].([]interface{}) //type casting
 	fmt.Println(strs)
 	str1 := strs[0]
 	fmt.Println(str1)

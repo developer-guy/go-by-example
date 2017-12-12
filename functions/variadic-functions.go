@@ -13,7 +13,8 @@ func sum(nums ...int) {
 	fmt.Print(nums, "=")
 	total := 0
 
-	for _, num := range nums {
+	for i, num := range nums {
+		fmt.Println("Index : ", i)
 		total += num
 	}
 

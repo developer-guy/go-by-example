@@ -16,7 +16,10 @@ func vals() (int, int) {
 }
 
 func swap(i, y int) (x int, t int) {
-	x = y
-	t = i
+	x,t = swap2(i,y)
 	return
+}
+
+func swap2(i,y int) (int,int){
+	return y,i
 }
