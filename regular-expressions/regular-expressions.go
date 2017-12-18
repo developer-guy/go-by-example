@@ -16,7 +16,7 @@ func main() {
 
 	fmt.Println(r.FindString("peach punch"))
 
-	var str string = "peach punch"
+	var str = "peach punch"
 	loc := r.FindStringIndex(str)
 	substr := str[loc[0]:loc[1]]
 	fmt.Println(substr)

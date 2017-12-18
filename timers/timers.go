@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var timer *time.Timer = time.NewTimer(time.Second * 2)
+	var timer = time.NewTimer(time.Second * 2)
 	fmt.Println("Time now :", time.Now())
 
 	<-timer.C
@@ -19,7 +19,7 @@ func main() {
 		fmt.Println("Timer2 expired")
 	}()
 
-	var isStop bool = timer2.Stop()
+	var isStop = timer2.Stop()
 	if isStop {
 		fmt.Println("Timer 2 stopped", time.Now())
 	}

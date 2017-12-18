@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	nums := []int{2, 3, 4}
+	nums := [3]int{2, 3, 4}
 
 	sum := 0
 
@@ -26,12 +26,12 @@ func main() {
 		}
 	}
 
-	var kvs map[string]string = map[string]string{"a": "apple", "b": "banane"}
+	var kvs = map[string]string{"a": "apple", "b": "banane"}
 	for k, v := range kvs {
 		fmt.Printf("Key %s ->  Val %s\n", k, v)
 	}
 
-	for k,_ := range kvs {
+	for k := range kvs {
 		fmt.Println("key:", k,"value:",kvs[k])
 	}
 

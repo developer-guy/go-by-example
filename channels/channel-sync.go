@@ -17,7 +17,7 @@ func main() {
 	done := make(chan bool, 1)
 	go worker(done)
 
-	var isDone bool = <-done
+	var isDone = <-done
 
 	fmt.Println("Is done", isDone)
 }

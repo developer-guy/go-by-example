@@ -42,6 +42,9 @@ func main() {
 	var rectangle *Rectangle = &Rectangle{ShortEdge: 5, LongEdge: 10}
 
 	printDetailsOfGeometricShape(square)
+	// interface'i pointer receiver
+	// olarak implemente ettiğimiz için struct'ların pointer
+	// adreslerini parametre olarak veriyoruz.
 	printDetailsOfGeometricShape(rectangle)
 
 }

@@ -1,13 +1,17 @@
 package main
 
-import "os"
+import (
+	"os"
+	"fmt"
+)
 
 func main() {
 	panic("a problem")
 
-	_, err := os.Create("/tmp/file")
-	if err != nil {
+	if file, err := os.Create("/tmp/file"); err != nil {
 		panic(err)
+	}else{
+		fmt.Println(file.Name())
 	}
 
 }
