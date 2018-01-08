@@ -35,7 +35,7 @@ Sincerely,
 `
 
 func SendMail(done chan bool) {
-	emailUser := &EmailUser{"bapaydin67", os.Getenv("PWD"), "smtp.gmail.com", 587}
+	emailUser := EmailUser{"bapaydin67", os.Getenv("PWD"), "smtp.gmail.com", 587}
 	auth := smtp.PlainAuth("", emailUser.Username, emailUser.Password, emailUser.Emailserver)
 	var err error
 	var doc bytes.Buffer

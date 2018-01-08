@@ -20,4 +20,6 @@ func main() {
 	shape.printAreaValues()
 	fmt.Println("Area:", shape.calculateArea())
 
+	fmt.Println(shape)
+
 }

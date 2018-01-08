@@ -14,6 +14,7 @@ func main() {
 
 	var mutex = &sync.Mutex{} //javadaki multithread value protection synchorized
 
+
 	var readOps uint64 = 0
 	var writeOps uint64 = 0
 

@@ -65,7 +65,7 @@ func main() {
 
 	fmt.Println("Include plum:", Include(strs, "plum"))
 
-	fmt.Println(Any(strs, func(v string) bool {
+	fmt.Println(Any(strs, func (v string) bool {
 		return strings.HasPrefix(v, "z")
 	}))
 
