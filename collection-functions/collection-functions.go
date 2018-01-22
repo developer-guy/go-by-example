@@ -19,14 +19,12 @@ func Include(vs []string, v string) bool {
 }
 
 func Any(vs []string, f func(string) bool) bool {
-	var stats bool = false
 	for _, e := range vs {
 		if f(e) {
-			stats = true
-			break
+			return true
 		}
 	}
-	return stats
+	return false
 }
 
 func All(vs []string, f func(string) bool) bool {
@@ -65,7 +63,7 @@ func main() {
 
 	fmt.Println("Include plum:", Include(strs, "plum"))
 
-	fmt.Println(Any(strs, func (v string) bool {
+	fmt.Println(Any(strs, func(v string) bool {
 		return strings.HasPrefix(v, "z")
 	}))
 

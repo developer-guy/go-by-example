@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	data := "TOKEN_SECRET"
-	sEnc := b64.StdEncoding.EncodeToString([]byte(data))
+	data := []byte("TOKEN_SECRET")
+	sEnc := b64.StdEncoding.EncodeToString(data)
 
 	fmt.Println("This is the encoded format of string:", sEnc)
 
